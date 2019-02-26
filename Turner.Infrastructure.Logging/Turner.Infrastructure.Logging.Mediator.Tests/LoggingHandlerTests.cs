@@ -8,21 +8,39 @@ namespace Turner.Infrastructure.Logging.Mediator.Tests
     public class LoggingHandlerTests
     {
         [Test]
-        public void HandleAsync_XX_XX()
+        public void HandleAsync_NonGenericResponse_CallsInnerHandleAsync()
         {
+            var loggerMock = new Mock<ILogger>();
             var handlerMock = new Mock<IRequestHandler<TestRequest>>();
-            handlerMock.Setup(x => x.HandleAsync(It.IsAny<TestRequest>()));
-
+            var loggingHandler = new LoggingHandler<TestRequest>(loggerMock.Object, handlerMock.Object);
             var request = new TestRequest();
 
-            var response = handlerMock.Object.HandleAsync(request);
+            loggingHandler.HandleAsync(request);
 
+            handlerMock.Verify(x => x.HandleAsync(request), Times.Once);
+        }
 
+        [Test]
+        public void HandleAsync_WithGenericResponse_CallsInnerHandleAsync()
+        {
+            var loggerMock = new Mock<ILogger>();
+            var handlerMock = new Mock<IRequestHandler<TestRequestWithResponse, TestResponse>>();
+            var loggingHandler = new LoggingHandler<TestRequestWithResponse, TestResponse>(loggerMock.Object, handlerMock.Object);
+            var request = new TestRequestWithResponse();
+
+            loggingHandler.HandleAsync(request);
+
+            handlerMock.Verify(x => x.HandleAsync(request), Times.Once);
         }
     }
 
-    class TestRequest : IRequest
+    public class TestRequest : IRequest
     {
-
     }
+
+    public class TestRequestWithResponse : IRequest<TestResponse>
+    {
+    }
+
+    public class TestResponse { }
 }

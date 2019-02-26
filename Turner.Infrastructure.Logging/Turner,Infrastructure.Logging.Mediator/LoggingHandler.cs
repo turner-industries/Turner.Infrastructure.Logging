@@ -15,15 +15,15 @@ namespace Turner.Infrastructure.Logging.Mediator
             _inner = inner;
         }
 
-        public Task<Response> HandleAsync(TRequest request)
+        public async Task<Response> HandleAsync(TRequest request)
         {
-            var response = _inner.HandleAsync(request);
+            var response = await _inner.HandleAsync(request);
 
             _logger.Info($"Executed {TypeUtility.GetPrettyName(typeof(TRequest))}",
                 new LoggingResult<TRequest>
                 {
-                    Errors = response.Result.Errors,
-                    Result = response.Result,
+                    Errors = response.Errors,
+                    Result = response,
                     Request = request,
                 });
 
@@ -36,21 +36,21 @@ namespace Turner.Infrastructure.Logging.Mediator
         private readonly IRequestHandler<TRequest, TResult> _inner;
         private readonly ILogger _logger;
 
-        public LoggingHandler(IRequestHandler<TRequest, TResult> inner, ILogger logger)
+        public LoggingHandler(ILogger logger, IRequestHandler<TRequest, TResult> inner)
         {
             _inner = inner;
             _logger = logger;
         }
 
-        public Task<Response<TResult>> HandleAsync(TRequest request)
+        public async Task<Response<TResult>> HandleAsync(TRequest request)
         {
-            var response = _inner.HandleAsync(request);
+            var response = await _inner.HandleAsync(request);
 
             _logger.Info($"Executed {TypeUtility.GetPrettyName(typeof(TRequest))}",
                 new LoggingResult<TRequest, TResult>
                 {
-                    Errors = response.Result.Errors,
-                    Result = response.Result.Data,
+                    Errors = response.Errors,
+                    Result = response.Data,
                     Request = request,
                 });
 

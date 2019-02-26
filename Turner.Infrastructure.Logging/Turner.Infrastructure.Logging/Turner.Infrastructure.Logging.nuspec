@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Turner.Infrastructure.Logging</id>
+    <version>$(buildNumber)$</version>
+    <authors>Turner Industries Group, LLC</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package description</description>
+    <releaseNotes>Turner.Infrastructure.Logging contains Turner Industries Group's common logging architecture.</releaseNotes>
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="12.0.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\netcoreapp2.0\Turner.Infrastructure.Logging.dll" target="lib" />
+  </files>
+</package>
