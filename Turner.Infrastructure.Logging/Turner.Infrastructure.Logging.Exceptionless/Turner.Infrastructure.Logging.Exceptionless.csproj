@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <RepositoryUrl>https://github.com/turner-industries/Turner.Infrastructure.Logging</RepositoryUrl>
+    <PackageTags>log,logging,exceptionless,turner</PackageTags>
+    <Description>Contains Turner Industries Group's logging architecture using Exceptionless. For documentation or support, head to the github page: https://github.com/turner-industries/Turner.Infrastructure.Logging.</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Company>Turner Industries Group, LLC</Company>
+    <Authors>Turner Industries Group, LLC</Authors>
+    <PackageLicenseUrl></PackageLicenseUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Exceptionless.AspNetCore" Version="4.3.2022" />
+    <PackageReference Include="Turner.Infrastructure.Logging.AspNetCore" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>

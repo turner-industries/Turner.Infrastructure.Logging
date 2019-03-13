@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Turner.Infrastructure.Logging</id>
+    <id>Turner.Infrastructure.Logging.Exceptionless</id>
     <version>$(buildNumber)$</version>
     <authors>Turner Industries Group, LLC</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Package description</description>
-    <releaseNotes>Contains Turner Industries Group's common logging architecture. For documentation or support, head to the github page: https://github.com/turner-industries/Turner.Infrastructure.Logging .</releaseNotes>
+    <releaseNotes>Turner.Infrastructure.Logging.Exceptionless contains Turner Industries Group's implementation of Exceptionless within Turner's common logging architecture.</releaseNotes>
     <dependencies>
-      <dependency id="Newtonsoft.Json" version="12.0.1" />
+      <dependency id="Exceptionless.AspNetCore" version="4.3.2022" />
     </dependencies>
   </metadata>
   <files>
