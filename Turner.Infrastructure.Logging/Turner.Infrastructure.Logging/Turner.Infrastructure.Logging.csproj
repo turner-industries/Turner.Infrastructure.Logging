@@ -1,16 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Contains Turner Industries Group's common logging architecture. For documentation or support, head to the github page: https://github.com/turner-industries/Turner.Infrastructure.Logging.</Description>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <RepositoryUrl>https://github.com/turner-industries/Turner.Infrastructure.Logging</RepositoryUrl>
-    <Version>1.0.0</Version>
+    <Version>2.0.0</Version>
     <Authors>Turner Industries Group, LLC</Authors>
     <Company>Turner Industries Group, LLC</Company>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
     <PackageId>Turner.Infrastructure.Logging.AspNetCore</PackageId>
   </PropertyGroup>
 
