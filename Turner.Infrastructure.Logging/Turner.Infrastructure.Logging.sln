@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Turner.Infrastructure.Loggi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Turner.Infrastructure.Logging.Mediator.Tests", "Turner.Infrastructure.Logging.Mediator.Tests\Turner.Infrastructure.Logging.Mediator.Tests.csproj", "{3A22D113-2006-4832-B377-2425B7BC1DCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Turner.Infrastructure.Logging.Exceptionless", "Turner.Infrastructure.Logging.Exceptionless\Turner.Infrastructure.Logging.Exceptionless.csproj", "{F1D6149B-E519-4D52-A1A8-C73211D3120F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Turner.Infrastructure.Logging.Exceptionless", "Turner.Infrastructure.Logging.Exceptionless\Turner.Infrastructure.Logging.Exceptionless.csproj", "{F1D6149B-E519-4D52-A1A8-C73211D3120F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

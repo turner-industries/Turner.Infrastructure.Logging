@@ -14,8 +14,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Exceptionless.AspNetCore" Version="4.3.2022" />
-    <PackageReference Include="Turner.Infrastructure.Logging.AspNetCore" Version="1.0.0" />
+    <PackageReference Include="Exceptionless.AspNetCore" Version="4.3.2027" />
+    <PackageReference Include="Turner.Infrastructure.Logging.AspNetCore" Version="2.0.0" />
   </ItemGroup>
 
 </Project>
